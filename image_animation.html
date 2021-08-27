@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width:70vw;
+            margin:10vh 15vw;
+            position: relative;
+        }
+        #one{
+            background-color: blue;
+            height:40vh;
+            width:20vw;
+            position: absolute;
+            left:0vw;
+            z-index:10;
+            transition: .5s ease-in-out;
+        }
+        #two{
+            background-color:red;
+            height:40vh;
+            width:20vw;
+            position: absolute;
+            left:23vw;
+            transform: scale(1.2);
+            z-index:20;
+            transition: .5s ease-in-out;
+        }
+        #three{
+            background-color:green;
+            height:40vh;
+            width:20vw;
+            position: absolute;
+            left:46vw;
+            z-index:10;
+            transition: .5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    <div onclick="first()" id="one">
+    </div>
+
+    <div onclick="second()" id="two">
+    </div>
+
+    <div onclick="third()" id="three">
+    </div>
+
+    </div>
+    <script>
+        function first()
+        {
+            var x=document.getElementById("one");
+            var y=document.getElementById("two");
+            var z=document.getElementById("three");
+            x.style.zIndex=20;
+            y.style.zIndex=10;
+            z.style.zIndex=10;
+            x.style.left="23vw";
+            y.style.left="0vw";
+            z.style.left="46vw";
+            x.style.transform="scale(1.2)";
+            y.style.transform="scale(1)";
+            z.style.transform="scale(1)";
+        }
+        function second()
+        {
+            var x=document.getElementById("one");
+            var y=document.getElementById("two");
+            var z=document.getElementById("three");
+            y.style.zIndex=20;
+            x.style.zIndex=10;
+            z.style.zIndex=10;
+            y.style.left="23vw";
+            x.style.left="0vw";
+            z.style.left="46vw";
+            y.style.transform="scale(1.2)";
+            x.style.transform="scale(1)";
+            z.style.transform="scale(1)";
+        }
+        function third()
+        {
+            var x=document.getElementById("one");
+            var y=document.getElementById("two");
+            var z=document.getElementById("three");
+            z.style.zIndex=20;
+            y.style.zIndex=10;
+            x.style.zIndex=10;
+            z.style.left="23vw";
+            y.style.left="0vw";
+            x.style.left="46vw";
+            z.style.transform="scale(1.2)";
+            y.style.transform="scale(1)";
+            x.style.transform="scale(1)";
+        }
+    </script>
+</body>
+</html>
